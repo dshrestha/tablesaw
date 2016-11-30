@@ -2824,7 +2824,7 @@ if( Tablesaw.mustard ) {
 	// add methods
 	$.extend( $.fn[ pluginName ].prototype, methods );
 
-	$( document ).on( "tablesawcreate", function( e, Tablesaw ) {
+	$( document ).on( "tablesawcreate tablesawrefresh", function( e, Tablesaw ) {
 		if( Tablesaw.$table.is( initSelector ) ) {
 			Tablesaw.$table[ pluginName ]();
 		}
